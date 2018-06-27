@@ -1,6 +1,6 @@
 <template>
   <mu-container>
-    <div class="title">登录</div>
+    <div class="title">注册</div>
     <mu-form ref="form" :model="validateForm" class="mu-demo-form">
       <mu-form-item label="用户名" help-text="帮助文字" prop="username" :rules="usernameRules">
         <mu-text-field v-model="validateForm.username" prop="username"></mu-text-field>
@@ -14,7 +14,7 @@
       <mu-form-item>
         <mu-button color="primary" @click="submit">提交</mu-button>
         <mu-button @click="clear">重置</mu-button>
-        <mu-button color="success" @click="toRegister">注册</mu-button>
+        <mu-button color="success" @click="clear">注册</mu-button>
       </mu-form-item>
     </mu-form>
   </mu-container>
@@ -53,20 +53,11 @@ export default {
         password: '',
         isAgree: false
       }
-    },
-    toRegister () {
-      this.$router.push('/register')
     }
   }
 }
 </script>
-<style>
-  .mu-demo-form .title{
-    width: 100%;
-    max-width: 460px;
-    margin: 0 auto;
-  }
-  .title {
-    font-size: 50px;
-  }
+
+<style scoped>
+
 </style>
